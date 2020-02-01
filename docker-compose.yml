@@ -5,6 +5,7 @@ services:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
+       - ./data/wordpress.sql:/docker-entrypoint-initdb.d/wordpress.sql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: somewordpress

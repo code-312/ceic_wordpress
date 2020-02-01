@@ -1,5 +1,6 @@
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
+!data/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
