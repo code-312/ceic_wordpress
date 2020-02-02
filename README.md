@@ -18,7 +18,7 @@ Once you have docker installed, run the following commands to clone the project 
 git clone https://github.com/Code-For-Chicago/ceic_wordpress.git
 cd ceic_wordpress
 docker-compose up -d
-cat init/wordpress.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress -pwordpress wordpress --init-command="SET autocommit=0;"
+cat seed.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress -pwordpress wordpress --init-command="SET autocommit=0;"
 ```
 
 #### Github WP Sync
