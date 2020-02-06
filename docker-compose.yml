@@ -6,6 +6,8 @@ services:
      volumes:
        - db_data:/var/lib/mysql
      restart: always
+     volumes: 
+      - ./wp-content:/var/www/html/wp-content
      environment:
        MYSQL_ROOT_PASSWORD: somewordpress
        MYSQL_DATABASE: wordpress
