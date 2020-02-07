@@ -5,6 +5,7 @@ services:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
+       - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: somewordpress
@@ -16,6 +17,8 @@ services:
      depends_on:
        - db
      image: wordpress:latest
+     volumes:
+      - ./wp-content:/var/www/html/wp-content
      ports:
        - "8000:80"
      restart: always
@@ -26,5 +29,6 @@ services:
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
        WORDPRESS_DB_NAME: wordpress
+
 volumes:
     db_data: {}
