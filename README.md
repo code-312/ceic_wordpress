@@ -21,6 +21,8 @@ docker-compose up -d
 cat seed.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress -pwordpress wordpress --init-command="SET autocommit=0;"
 ```
 
+The `seed.sql` import above is an example of how one might import database information into your local development environment. Our intention is not to commit database dumps from upstream instances of this site to this repository.
+
 #### Docker Volume Configuration
 * The wp-content folder in our repository is configured to map internally to our Wordpress container like so: `./wp-content:/var/www/html/wp-content`. Meaning that when you pull down the repository that the contents of the wp-content folder will be mounted by the container at `/var/www/html/wp-content`. This is set up in the `docker-compose.yml` file in the Wordpress container's volumes section.
 
