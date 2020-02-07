@@ -5,7 +5,7 @@ services:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
-       - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+       - ./data:/docker-entrypoint-initdb.d
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: somewordpress
