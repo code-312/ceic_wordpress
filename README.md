@@ -18,7 +18,7 @@ Once you have docker installed, run the following commands to clone the project 
 git clone https://github.com/Code-For-Chicago/ceic_wordpress.git
 cd ceic_wordpress
 docker-compose up -d
-cat seed.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress -pwordpress wordpress --init-command="SET autocommit=0;"
+cat data/seed.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress -pwordpress wordpress --init-command="SET autocommit=0;"
 ```
 
 The `seed.sql` import above is an example of how one might import database information into your local development environment. Our intention is not to commit database dumps from upstream instances of this site to this repository.
