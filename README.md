@@ -32,3 +32,11 @@ The `seed.sql` import above is an example of how one might import database infor
 * There is an 'export' and 'import' built into WP which handles the associated content (pages, posts, and media) - wp-admin/import.php and export.php - 
 * Currently the default user and password for both wordpress and mysql is exposed-- may want to use a secrets file.
   * This is also important for the init script in the [docker install](#docker-install) section (runs a command using the username and password in the shell)
+
+#### Git submodule
+
+We are currently using the `air-light` starter theme, which is forked into the Code for Chicago organization over [here](https://github.com/Code-For-Chicago/air-light). After you have clone this repository locally you'll have to run two commands in order to pull in the theme dependency/
+* `git submodule init`
+* `git submodule update`
+
+Once the second command is run you should see theme files under `wp-content/themes/air-light/`. In order to update your local repository with changes made to the submoduled theme you'll again need to run `git submodule update`.
