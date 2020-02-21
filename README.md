@@ -39,4 +39,4 @@ We are currently using the `air-light` starter theme, which is forked into the C
 * `git submodule init`
 * `git submodule update`
 
-Once the second command is run you should see theme files under `wp-content/themes/air-light/`.
+Once the second command is run you should see theme files under `wp-content/themes/air-light/`. In order to update your local repository with changes made to the submoduled theme you'll again need to run `git submodule update`.
