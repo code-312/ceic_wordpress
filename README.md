@@ -24,19 +24,21 @@ cat data/seed.sql | docker exec -i $(docker-compose ps -q db) mysql -u wordpress
 The `seed.sql` import above is an example of how one might import database information into your local development environment. Our intention is not to commit database dumps from upstream instances of this site to this repository.
 
 #### Docker Volume Configuration
-* The wp-content folder in our repository is configured to map internally to our Wordpress container like so: `./wp-content:/var/www/html/wp-content`. Meaning that when you pull down the repository that the contents of the wp-content folder will be mounted by the container at `/var/www/html/wp-content`. This is set up in the `docker-compose.yml` file in the Wordpress container's volumes section.
+
+- The wp-content folder in our repository is configured to map internally to our Wordpress container like so: `./wp-content:/var/www/html/wp-content`. Meaning that when you pull down the repository that the contents of the wp-content folder will be mounted by the container at `/var/www/html/wp-content`. This is set up in the `docker-compose.yml` file in the Wordpress container's volumes section.
 
 #### Github WP Sync
 
-* ! TODO - initially and periodically check .gitignore to ensure that it's properly scoped - i.e. wp-content directory - currently looks good, but we want to maybe keep an eye out for DB seeding / raking (also per Ryan a docker config / init script) as well as php settings (default docker / WP may not be ideal - usu in /etc/php7.-4 but I don't see that in the docker image)
-* There is an 'export' and 'import' built into WP which handles the associated content (pages, posts, and media) - wp-admin/import.php and export.php - 
-* Currently the default user and password for both wordpress and mysql is exposed-- may want to use a secrets file.
-  * This is also important for the init script in the [docker install](#docker-install) section (runs a command using the username and password in the shell)
+- ! TODO - initially and periodically check .gitignore to ensure that it's properly scoped - i.e. wp-content directory - currently looks good, but we want to maybe keep an eye out for DB seeding / raking (also per Ryan a docker config / init script) as well as php settings (default docker / WP may not be ideal - usu in /etc/php7.-4 but I don't see that in the docker image)
+- There is an 'export' and 'import' built into WP which handles the associated content (pages, posts, and media) - wp-admin/import.php and export.php -
+- Currently the default user and password for both wordpress and mysql is exposed-- may want to use a secrets file.
+  - This is also important for the init script in the [docker install](#docker-install) section (runs a command using the username and password in the shell)
 
 #### Git submodule
 
-We are currently using the `air-light` starter theme, which is forked into the Code for Chicago organization over [here](https://github.com/Code-For-Chicago/air-light). After you have clone this repository locally you'll have to run two commands in order to pull in the theme dependency/
-* `git submodule init`
-* `git submodule update`
+We are currently using the `air-light` starter theme, which is forked into the Code for Chicago organization over [here](https://github.com/Code-For-Chicago/air-light). After you have cloned the ceic_wordpress repository locally you'll have to run two commands in order to pull in the theme dependency.
+
+- `git submodule init`
+- `git submodule update`
 
 Once the second command is run you should see theme files under `wp-content/themes/air-light/`. In order to update your local repository with changes made to the submoduled theme you'll again need to run `git submodule update`.
