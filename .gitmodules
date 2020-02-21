@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/air-light"]
+	path = wp-content/themes/air-light
+	url = https://github.com/Code-For-Chicago/air-light.git
