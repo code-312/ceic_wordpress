@@ -26,9 +26,9 @@ get_header(); ?>
   <main role="main" id="main" class="site-main">
     <div class="block">
       <div class="container">
-      <div class="kyr-hero">
-        <img src="<?php echo get_stylesheet_directory_uri() . "/KYR short.png"?>" />
-    </div>
+        <div class="kyr-hero">
+            <img src="<?php echo get_stylesheet_directory_uri() . "/KYR short.png"?>" />
+        </div>
 
         <?php if ( have_posts() ) {
         	while ( have_posts() ) {
