@@ -61,10 +61,15 @@
     width: 100% !important;
 }
 
-/* KYR Hero Image */
-.kyr-hero {
+/* KYR Hero Section */
+.kyr-hero img {
     width:100%;
     height: auto;
     margin: auto;
     text-align: center;   
+}
+
+.container h1 {
+    color: var(--dark-green);
+    margin: 0;
 }

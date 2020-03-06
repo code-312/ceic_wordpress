@@ -27,6 +27,7 @@ get_header(); ?>
     <div class="block">
       <div class="container">
         <div class="kyr-hero">
+            <h1> Know your rights </h1>
             <img src="<?php echo get_stylesheet_directory_uri() . "/KYR short.png"?>" />
         </div>
 
