@@ -10,3 +10,79 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  airlightchild
 */
+
+/* Colors */
+
+:root {
+    --light-green: #10AC84;
+    --dark-green: #0c4148;
+    --orange: #ec7907;
+    --dark-grey: #525252;
+    --light-grey: #EAEAEA;
+}
+
+/* Header */
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 766px) {
+    .logo {
+        max-width: 33%;
+        height: auto;
+    }
+}
+
+/* Navigation */
+.nav-flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.nav-flex-item {
+    padding: 5px;
+    margin: 0px;
+    
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+.nav-container {
+    background-color: var(--light-green);
+}
+
+.nav-primary {
+    color: white;
+    background-color: var(--light-green) !important;
+}
+
+.nav-primary .menu-item a {
+    color: white !important;
+}
+
+.hamburger-inner, ::before, ::after {
+    background-color: white !important;
+}
+
+.hamburger-box {
+    width: 3rem !important;
+}
+
+.main-navigation-wrapper {
+    width: 100% !important;
+}
