@@ -2,6 +2,8 @@ version: '3.3'
 
 services:
    db:
+    volumes:
+        - db_data:/var/lib/mysql
      env_file: ./.env
 
    wordpress:
