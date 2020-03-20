@@ -31,14 +31,23 @@ get_header(); ?>
             <img src="<?php echo get_stylesheet_directory_uri() . "/KYR short.png"?>" />
         </div>
 
-        <?php if ( have_posts() ) {
-        	while ( have_posts() ) {
-        		the_post();
-        		the_content();
-					}
-        } else {
-        	get_template_part( 'template-parts/content', 'none' );
-        } ?>
+        <div class="events">
+            <div class="event">
+                <div class="event-info">
+                    <h3>Event Title</h3>
+                    <span>03/17/2020 5:00p</span>
+                    <span>1232 Street Ave, IL, 60613</span>
+                </div>
+                <div class="event-date">
+                    <div class="event-month">
+                        March
+                    </div>
+                    <div class="event-date">
+                        17
+                    </div>
+                </div>
+            </div>
+        </div>
 
       </div>
     </div>
@@ -46,4 +55,4 @@ get_header(); ?>
   </main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_footer();
+<?php get_footer();?>

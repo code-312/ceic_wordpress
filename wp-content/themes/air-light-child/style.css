@@ -73,3 +73,11 @@
     color: var(--dark-green);
     margin: 0;
 }
+
+/* Events */
+.event {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
