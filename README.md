@@ -42,3 +42,18 @@ We are currently using the `air-light` starter theme, which is forked into the C
 - `git submodule update`
 
 Once the second command is run you should see theme files under `wp-content/themes/air-light/`. In order to update your local repository with changes made to the submoduled theme you'll again need to run `git submodule update`.
+
+#### Running in Production mode
+
+We have a production yaml file named `docker-compose.prod.yml` that is used to define how the containers should operate within a hosted environment. This includes making use of an environment file to ensure that we aren't sharing things like credentials in our github repo. This can be started by using the following command instead of the typical `docker-compose up`: `docker-compose -f docker-compose.prod.yml up -d`. As you'll see, the main difference is the -f argument which indicates to docker-compose that it should use the prod file instead of the default.
+- Note, you will also need a env file located at ./.env in order for this mode to function. Here is an example of what that looks like: 
+```
+MYSQL_ROOT_PASSWORD=mysqlrootpassword
+MYSQL_DATABASE=auser
+MYSQL_USER=auser
+MYSQL_PASSWORD=apassword
+WORDPRESS_DB_HOST=db:1234
+WORDPRESS_DB_USER=auser
+WORDPRESS_DB_PASSWORD=apassword
+WORDPRESS_DB_NAME=text
+```
