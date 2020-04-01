@@ -15,7 +15,7 @@ get_header(); ?>
         	while ( have_posts() ) {
                 echo("<h1>");
                 the_title();
-                echo("</h1>")
+                echo("</h1>");
         		the_post();
         		the_content();
 					}
