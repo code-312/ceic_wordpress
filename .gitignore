@@ -24,3 +24,6 @@ node_modules/
 
 #Env file
 .env
+
+# contents of uploads folder
+uploads/*
