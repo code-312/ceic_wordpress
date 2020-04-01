@@ -17,6 +17,7 @@ services:
      restart: always
      volumes: 
       - ./wp-content:/var/www/html/wp-content
+      - ./uploads:/var/www/html/wp-content/uploads
      env_file: ./.env
 
 volumes:
