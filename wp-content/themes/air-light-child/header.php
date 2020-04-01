@@ -31,11 +31,11 @@
 
       <div class="site-branding">
         <?php if ( is_front_page() && is_home() ) : ?>
-        <h1 class="site-title">
+        <div class="site-title">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
            <img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/logo.png'; ?>" />
           </a>
-        </h1>
+        </div>
         <?php else : ?>
           <p class="site-title">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

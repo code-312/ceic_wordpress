@@ -29,7 +29,7 @@
 
 @media (min-width: 766px) {
     .logo {
-        max-width: 33%;
+        max-width: 75%;
         height: auto;
     }
 }
@@ -56,6 +56,10 @@
     color: white !important;
 }
 
+.nav-primary .menu-item a:hover {
+    color: var(--dark-green) !important;
+}
+
 .hamburger-inner, ::before, ::after {
     background-color: white !important;
 }
@@ -66,6 +70,10 @@
 
 .main-navigation-wrapper {
     width: 100% !important;
+}
+
+.site-branding {
+    width: 50%;
 }
 
 /* KYR Hero Section */
