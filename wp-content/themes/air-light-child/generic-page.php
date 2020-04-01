@@ -13,7 +13,9 @@ get_header(); ?>
       <div class="container">
         <?php if ( have_posts() ) {
         	while ( have_posts() ) {
+                echo("<h1>");
                 the_title();
+                echo("</h1>")
         		the_post();
         		the_content();
 					}
