@@ -14,6 +14,7 @@ services:
      image: wordpress:latest
      ports:
        - "80:80"
+       - "443:443"
      restart: always
      volumes: 
       - ./wp-content:/var/www/html/wp-content
