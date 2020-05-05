@@ -36,7 +36,54 @@ $light-grey: #eaeaea;
 #site-footer {
   background-color: $light-green;
   color: white;
-  text-align: center;
+  text-align: left;
+  font-size: 1.1rem;
+
+  @media (min-width: 400px) {
+    font-size: 1.5rem;
+  }
+  
+  @media (min-width: 550px) {
+    font-size: 2rem;
+  }
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.footer-info-container {
+  padding: 10px 5px 10px 10px;
+}
+
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-self: flex-end;
+  padding: 10px 10px 10px 5px;
+}
+
+.social-media-container__icons {
+  margin-top: 10px;
+}
+
+.social-media-icon {
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: 550px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.social-media-link + .social-media-link {
+  margin-left: 10px;
 }
 
 /* Navigation */
