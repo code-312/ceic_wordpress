@@ -28,12 +28,7 @@
   background-color: #10ac84;
   color: white;
   text-align: left;
-  font-size: 1.1rem;
-}
-@media (min-width: 400px) {
-  #site-footer {
-    font-size: 1.3rem;
-  }
+  font-size: 1.3rem;
 }
 @media (min-width: 550px) {
   #site-footer {
@@ -60,6 +55,11 @@
   flex-grow: 1;
   max-width: 720px;
   min-height: 100px;
+}
+@media (max-width: 320px) {
+  .footer-content-container {
+    flex-wrap: wrap;
+  }
 }
 @media (min-width: 900px) {
   .footer-content-container {
@@ -161,10 +161,10 @@
 }
 
 .social-media-icon {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
-@media (min-width: 550px) {
+@media (min-width: 350px) {
   .social-media-icon {
     width: 40px;
     height: 40px;
