@@ -46,7 +46,9 @@ Once the second command is run you should see theme files under `wp-content/them
 #### Running in Production mode
 
 We have a production yaml file named `docker-compose.prod.yml` that is used to define how the containers should operate within a hosted environment. This includes making use of an environment file to ensure that we aren't sharing things like credentials in our github repo. This can be started by using the following command instead of the typical `docker-compose up`: `docker-compose -f docker-compose.prod.yml up -d`. As you'll see, the main difference is the -f argument which indicates to docker-compose that it should use the prod file instead of the default.
-- Note, you will also need a env file located at ./.env in order for this mode to function. Here is an example of what that looks like: 
+
+- Note, you will also need a env file located at ./.env in order for this mode to function. Here is an example of what that looks like:
+
 ```
 MYSQL_ROOT_PASSWORD=mysqlrootpassword
 MYSQL_DATABASE=auser
@@ -57,3 +59,7 @@ WORDPRESS_DB_USER=auser
 WORDPRESS_DB_PASSWORD=apassword
 WORDPRESS_DB_NAME=text
 ```
+
+#### CSS Edits using Sass
+
+Sass is installed and style updates in the child folder can be made to the `style.scss` file. For running and compiling locally, install [here](https://sass-lang.com/install).
