@@ -36,31 +36,37 @@
   background-color: #10ac84;
 }
 
-.nav-primary {
+#nav {
   color: white;
-  background-color: #10ac84 !important;
+  background-color: #10ac84;
 }
 
-.nav-primary .menu-item a {
-  color: white !important;
+#nav .menu-item a {
+  color: white;
 }
 
-.nav-primary .menu-item a:hover {
-  color: #0c4148 !important;
-}
-
-.hamburger-inner,
-::before,
-::after {
-  background-color: white !important;
+#nav .menu-item a:hover {
+  color: #0c4148;
 }
 
 .hamburger-box {
-  width: 3rem !important;
+  width: 3rem;
+}
+
+.hamburger-box .hamburger-inner,
+.hamburger-box .hamburger-inner::before,
+.hamburger-box .hamburger-inner::after {
+  background-color: white;
+}
+
+.nav-toggle:focus .hamburger-inner,
+.nav-toggle:focus .hamburger-inner::before,
+.nav-toggle:focus .hamburger-inner::after {
+  background-color: white;
 }
 
 .main-navigation-wrapper {
-  width: 100% !important;
+  width: 100%;
 }
 
 .site-branding {
