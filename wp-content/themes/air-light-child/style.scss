@@ -187,31 +187,47 @@ $light-grey: #eaeaea;
   background-color: $light-green;
 }
 
-.nav-primary {
+// Was .nav-primary, using the id allowed color change without !important
+
+#nav {
   color: white;
-  background-color: $light-green !important;
+  background-color: $light-green;
 }
 
-.nav-primary .menu-item a {
-  color: white !important;
+#nav .menu-item a {
+  color: white;
 }
 
-.nav-primary .menu-item a:hover {
-  color: $dark-green !important;
+#nav .menu-item a:hover {
+  color: $dark-green;
 }
 
-.hamburger-inner,
-::before,
-::after {
-  background-color: white !important;
-}
+//Added .hamburger-box class before inner styles
 
 .hamburger-box {
-  width: 3rem !important;
+  width: 3rem;
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: white;
+  }
 }
 
+// Added focus style to prevent color change
+
+.nav-toggle:focus {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: white;
+  }
+}
+
+//Removed !important, did not see style change in various responsive types, firefox or chrome
+
 .main-navigation-wrapper {
-  width: 100% !important;
+  width: 100%;
 }
 
 .site-branding {
