@@ -2,11 +2,11 @@
     <div class="footer-container">
         <div class="footer-newsletter-container">
             <div class="footer-newsletter-inner-container">
-                <label for="email">Newsletter</label>
-                <div class="footer-newsletter-input-container">
-                    <input type="email" name="email" id="email" placeholder="email address">
-                    <input id="newsletter-submit" type="submit" value="Sign Up">
-                </div>
+                <?php 
+                    if( function_exists('mc4wp_show_form') ) {
+                        mc4wp_show_form();
+                    }
+                ?>
             </div>
         </div>
         <div class="footer-content-container">
