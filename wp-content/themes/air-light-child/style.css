@@ -196,7 +196,6 @@
 .hamburger-box {
   width: 3rem;
 }
-
 .hamburger-box .hamburger-inner,
 .hamburger-box .hamburger-inner::before,
 .hamburger-box .hamburger-inner::after {
@@ -213,6 +212,11 @@
   width: 100%;
 }
 
+@media (max-width: 959px) {
+  .main-navigation-wrapper {
+    width: 10%;
+  }
+}
 .site-branding {
   width: 33%;
 }
