@@ -38,7 +38,7 @@ $light-grey: #eaeaea;
   color: white;
   text-align: left;
   font-size: 1.3rem;
-  
+
   @media (min-width: 550px) {
     font-size: 1.5rem;
   }
@@ -78,7 +78,7 @@ $light-grey: #eaeaea;
   @media (min-width: 900px) {
     display: inline;
     max-width: 360px;
-    align-self: center
+    align-self: center;
   }
 }
 
@@ -86,8 +86,6 @@ $light-grey: #eaeaea;
   width: 250px;
   height: auto;
 }
-
-
 
 .footer-info-container {
   padding: 10px 5px 10px 10px;
@@ -122,7 +120,7 @@ $light-grey: #eaeaea;
     color: $dark-green;
     font-weight: bold;
     font-size: 2rem;
-    margin-left: 10px; 
+    margin-left: 10px;
   }
 
   #email {
@@ -138,7 +136,7 @@ $light-grey: #eaeaea;
     justify-content: space-between;
     margin: 10px;
   }
-  
+
   #newsletter-submit {
     background-color: $light-green;
     color: white;
@@ -227,12 +225,12 @@ $light-grey: #eaeaea;
 //Removed !important, did not see style change in various responsive types, firefox or chrome
 
 .main-navigation-wrapper {
-  width: 100%; 
+  width: 100%;
 }
 
 @media (max-width: 959px) {
   .main-navigation-wrapper {
-    width: 10%; 
+    width: 10%;
   }
 }
 
@@ -252,3 +250,172 @@ $light-grey: #eaeaea;
   color: $dark-green;
   margin: 0;
 }
+
+// 8-20 Generic Page Template
+// Mobile
+
+h2 {
+  color: $light-green !important;
+  font-size: 18px;
+  margin-top: auto;
+}
+
+h2:not(:first-child) {
+  margin-top: 2em;
+}
+
+p {
+  line-height: 1.2em !important;
+}
+
+figcaption {
+  font-style: italic !important;
+  text-align: center;
+}
+
+// Volunteer Opportunities Page
+// Volunteer Opp. Mobile
+
+.section {
+  margin-bottom: 5em;
+}
+
+.welcome-section {
+  margin-top: 2em;
+}
+
+.welcome-text {
+  display: block;
+  line-height: 1em;
+}
+
+.column-heading {
+  margin-bottom: 0;
+}
+
+.column-description {
+  margin-top: 1em;
+}
+
+.donations-content p {
+  // line-height: 1em;
+}
+
+// Volunteer Opp. Desktop
+@media (min-width: 700px) {
+  .page-id-7 .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section {
+    margin-bottom: 5em;
+  }
+
+  .welcome-section {
+    margin-top: 2em;
+
+    figure {
+      display: flex;
+
+      .volunteer-image {
+        min-width: 250px;
+        width: 50vw;
+      }
+
+      div {
+        position: relative;
+
+        // Should figure out a better way to place this. Maybe with grid?
+
+        .welcome-text {
+          font-weight: 500;
+          height: auto;
+          margin: 2em 1em auto 1em;
+          right: 0;
+          width: 30ch;
+        }
+
+        .volunteer-caption {
+          align-self: flex-end;
+          bottom: 0;
+          font-size: 0.8em;
+          line-height: 1em;
+          margin-right: 1em;
+          position: absolute;
+          right: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .help-section {
+    .columns {
+      display: flex;
+      justify-content: space-between;
+
+      .column {
+        margin: 0 1em auto 0;
+        width: 20vw;
+      }
+
+      .column-description {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .donations-content p {
+    line-height: 1em;
+  }
+}
+
+// Volunteer page end
+
+// About page begin
+.about-page {
+  // About page Desktop, still need Mobile version
+  @media (min-width: 700px) {
+    figure {
+      margin-bottom: 5em;
+      img {
+        display: block;
+        height: 636px;
+        margin: auto;
+        width: 800px;
+      }
+      figcaption {
+        display: block;
+        font-size: 14px;
+        margin: 1em auto;
+        text-align: center;
+      }
+    }
+
+    .text-section {
+      margin-bottom: 5em;
+
+      h1 {
+        color: $light-green;
+        font-size: 24px;
+        margin-bottom: 1em;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1em;
+      }
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+
+      .column {
+        width: 360px;
+      }
+    }
+  }
+}
+// About page end
