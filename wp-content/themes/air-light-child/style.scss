@@ -252,7 +252,6 @@ $light-grey: #eaeaea;
 }
 
 // 8-20 Generic Page Template
-// Mobile
 
 h2 {
   color: $light-green !important;
@@ -374,7 +373,8 @@ figcaption {
 // Volunteer page end
 
 // About page begin
-.about-page {
+.about-page,
+.home-page {
   // About page Desktop, still need Mobile version
   @media (min-width: 700px) {
     figure {
@@ -419,3 +419,54 @@ figcaption {
   }
 }
 // About page end
+
+// Home page
+//Desktop version
+
+.home-page {
+  .image-one-group {
+    margin-bottom: 5em;
+
+    .image-one-caption {
+      font-size: 14px;
+    }
+  }
+
+  .section-heading {
+    color: $light-green;
+    font-size: 24px;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .column {
+    margin-bottom: 5em;
+    .column-one-heading,
+    .column-two-heading {
+      color: $light-green;
+      font-size: 24px;
+      margin-bottom: 1em;
+    }
+  }
+
+  .column-image-large {
+    height: 308px;
+    margin-top: 5em;
+    width: 360px;
+  }
+
+  .column-image-small {
+    height: 172px;
+    margin-top: 5em;
+    width: 348px;
+  }
+
+  .column-image-caption {
+    font-size: 18px;
+    font-style: normal !important;
+    line-height: 1em;
+    padding: 1em;
+    text-align: left;
+  }
+}
+// Home page end

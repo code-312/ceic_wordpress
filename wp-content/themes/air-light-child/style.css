@@ -389,34 +389,41 @@ figcaption {
 }
 
 @media (min-width: 700px) {
-  .about-page figure {
+  .about-page figure,
+  .home-page figure {
     margin-bottom: 5em;
   }
-  .about-page figure img {
+  .about-page figure img,
+  .home-page figure img {
     display: block;
     height: 636px;
     margin: auto;
     width: 800px;
   }
-  .about-page figure figcaption {
+  .about-page figure figcaption,
+  .home-page figure figcaption {
     display: block;
     font-size: 14px;
     margin: 1em auto;
     text-align: center;
   }
-  .about-page .text-section {
+  .about-page .text-section,
+  .home-page .text-section {
     margin-bottom: 5em;
   }
-  .about-page .text-section h1 {
+  .about-page .text-section h1,
+  .home-page .text-section h1 {
     color: #10ac84;
     font-size: 24px;
     margin-bottom: 1em;
   }
-  .about-page .text-section p {
+  .about-page .text-section p,
+  .home-page .text-section p {
     font-size: 18px;
     line-height: 1em;
   }
-  .about-page .columns {
+  .about-page .columns,
+  .home-page .columns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -424,8 +431,55 @@ figcaption {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .about-page .columns .column {
+  .about-page .columns .column,
+  .home-page .columns .column {
     width: 360px;
   }
+}
+
+.home-page .image-one-group {
+  margin-bottom: 5em;
+}
+
+.home-page .image-one-group .image-one-caption {
+  font-size: 14px;
+}
+
+.home-page .section-heading {
+  color: #10ac84;
+  font-size: 24px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.home-page .column {
+  margin-bottom: 5em;
+}
+
+.home-page .column .column-one-heading,
+.home-page .column .column-two-heading {
+  color: #10ac84;
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.home-page .column-image-large {
+  height: 308px;
+  margin-top: 5em;
+  width: 360px;
+}
+
+.home-page .column-image-small {
+  height: 172px;
+  margin-top: 5em;
+  width: 348px;
+}
+
+.home-page .column-image-caption {
+  font-size: 18px;
+  font-style: normal !important;
+  line-height: 1em;
+  padding: 1em;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
