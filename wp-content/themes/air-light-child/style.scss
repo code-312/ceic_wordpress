@@ -225,6 +225,7 @@ $light-grey: #eaeaea;
 //Removed !important, did not see style change in various responsive types, firefox or chrome
 
 .main-navigation-wrapper {
+  margin-right: 2em;
   width: 100%;
 }
 
@@ -372,10 +373,10 @@ figcaption {
 
 // Volunteer page end
 
-// About page begin
+// Home and About page begin
+// Desktop
 .about-page,
 .home-page {
-  // About page Desktop, still need Mobile version
   @media (min-width: 700px) {
     figure {
       margin-bottom: 5em;
@@ -414,15 +415,30 @@ figcaption {
 
       .column {
         width: 360px;
+
+        .column-image-large {
+          margin-top: 5em;
+        }
+
+        .column-image-small {
+          margin-top: 5em;
+        }
+
+        .column-image-caption {
+          padding: 1em;
+        }
+      }
+
+      .column:first-of-type {
+        margin-right: 2em;
       }
     }
   }
 }
-// About page end
 
-// Home page
-//Desktop version
+// Mobile
 
+.about-page,
 .home-page {
   .image-one-group {
     margin-bottom: 5em;
@@ -451,13 +467,13 @@ figcaption {
 
   .column-image-large {
     height: 308px;
-    margin-top: 5em;
+    margin-top: 0;
     width: 360px;
   }
 
   .column-image-small {
     height: 172px;
-    margin-top: 5em;
+    margin-top: 0;
     width: 348px;
   }
 
@@ -465,8 +481,9 @@ figcaption {
     font-size: 18px;
     font-style: normal !important;
     line-height: 1em;
-    padding: 1em;
+    margin-top: 1em;
+    padding: 0;
     text-align: left;
   }
 }
-// Home page end
+// Home page and About page end
