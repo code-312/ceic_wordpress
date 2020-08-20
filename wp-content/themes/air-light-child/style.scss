@@ -373,10 +373,10 @@ figcaption {
 
 // Volunteer page end
 
-// About page begin
+// Home and About page begin
+// Desktop
 .about-page,
 .home-page {
-  // Home and About page Desktop
   @media (min-width: 700px) {
     figure {
       margin-bottom: 5em;
@@ -436,7 +436,7 @@ figcaption {
   }
 }
 
-// Mobile version?
+// Mobile
 
 .about-page,
 .home-page {
