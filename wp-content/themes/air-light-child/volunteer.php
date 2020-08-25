@@ -13,7 +13,7 @@ get_header(); ?>
 <!-- To test actual content, recreate page template in Advanced Custom Fields, then remove "!" in "!$contentCheck" conditional below.  -->
 <?php
 $contentCheck = get_field('first_section_-_welcome');
-if (!$contentCheck) : ?>
+if ($contentCheck) : ?>
 
 
 	<div id="content" class="content-area">

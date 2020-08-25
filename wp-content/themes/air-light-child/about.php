@@ -13,7 +13,7 @@ get_header(); ?>
 <!-- To test actual content, recreate page template in Advanced Custom Fields, then remove "!" in "!$contentCheck" conditional below.  -->
 <?php
 $contentCheck = get_field('image_one_group');
-if (!$contentCheck) : ?>
+if ($contentCheck) : ?>
 
 
     <div id="content" class="content-area">
