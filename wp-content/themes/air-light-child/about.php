@@ -112,7 +112,7 @@ if ($contentCheck) : ?>
 
                     <div class="image-one-group">
                         <figure>
-                            <img class="image-one" src="https://images.pexels.com/photos/2373357/pexels-photo-2373357.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="A flock of birds." />
+                            <img class="image-one" src="https://cannabisequityil.org/wp-content/uploads/2020/09/Coalition-planning-2.jpg" alt="A flock of birds." />
                             <figcaption class="image-one-caption">
                                 Lorem ipsum dolor.
                             </figcaption>
@@ -140,7 +140,7 @@ if ($contentCheck) : ?>
                     </div>
                     <div class="image-two-group">
                         <figure>
-                            <img class="image-two" src="https://images.pexels.com/photos/66863/goose-water-bird-nature-bird-66863.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="A goose up close and lookin at ya with some other geese hangin out in the background." />
+                            <img class="image-two" src="https://cannabisequityil.org/wp-content/uploads/2020/09/Regina-Sharon-Minnie-RAP.jpg" alt="A goose up close and lookin at ya with some other geese hangin out in the background." />
                             <figcaption class="image-two-caption">
                                 Lorem ipsum dolor.
                             </figcaption>
@@ -169,7 +169,7 @@ if ($contentCheck) : ?>
                     </div>
                     <div class="image-three-group">
                         <figure>
-                            <img class="image-three" src="https://images.pexels.com/photos/1082181/pexels-photo-1082181.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="A goose standing on a chain-link fence." />
+                            <img class="image-three" src="https://cannabisequityil.org/wp-content/uploads/2020/09/resource-1.jpg" alt="A goose standing on a chain-link fence." />
                             <figcaption class="image-three-caption">
                                 Lorem ipsum dolor.
                             </figcaption>

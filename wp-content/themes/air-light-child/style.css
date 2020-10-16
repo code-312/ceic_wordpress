@@ -24,6 +24,12 @@
   }
 }
 
+.nav-primary .menu-items a,
+.nav-primary .menu-items li {
+  margin: 0.25em !important;
+  padding: 0.25em !important;
+}
+
 /* Footer */
 #site-footer {
   background-color: #10ac84;
@@ -346,7 +352,7 @@ figcaption {
   }
   .welcome-section figure .volunteer-image {
     min-width: 250px;
-    width: 50vw;
+    max-width: 50vw;
   }
   .welcome-section figure div {
     position: relative;
@@ -397,9 +403,11 @@ figcaption {
   .about-page figure img,
   .home-page figure img {
     display: block;
-    height: 636px;
     margin: auto;
-    width: 800px;
+  }
+  .about-page figure img .image-one,
+  .home-page figure img .image-one {
+    min-width: 75vw;
   }
   .about-page figure figcaption,
   .home-page figure figcaption {
@@ -488,16 +496,12 @@ figcaption {
 
 .about-page .column-image-large,
 .home-page .column-image-large {
-  height: 308px;
   margin-top: 0;
-  width: 360px;
 }
 
 .about-page .column-image-small,
 .home-page .column-image-small {
-  height: 172px;
   margin-top: 0;
-  width: 348px;
 }
 
 .about-page .column-image-caption,

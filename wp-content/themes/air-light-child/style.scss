@@ -32,6 +32,12 @@ $light-grey: #eaeaea;
   }
 }
 
+.nav-primary .menu-items a,
+.nav-primary .menu-items li {
+  margin: 0.25em !important;
+  padding: 0.25em !important;
+}
+
 /* Footer */
 #site-footer {
   background-color: $light-green;
@@ -320,7 +326,7 @@ figcaption {
 
       .volunteer-image {
         min-width: 250px;
-        width: 50vw;
+        max-width: 50vw;
       }
 
       div {
@@ -382,9 +388,10 @@ figcaption {
       margin-bottom: 5em;
       img {
         display: block;
-        height: 636px;
         margin: auto;
-        width: 800px;
+        .image-one {
+          min-width: 75vw;
+        }
       }
       figcaption {
         display: block;
@@ -466,15 +473,11 @@ figcaption {
   }
 
   .column-image-large {
-    height: 308px;
     margin-top: 0;
-    width: 360px;
   }
 
   .column-image-small {
-    height: 172px;
     margin-top: 0;
-    width: 348px;
   }
 
   .column-image-caption {

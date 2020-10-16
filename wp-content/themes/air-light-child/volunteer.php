@@ -133,7 +133,7 @@ if ($contentCheck) : ?>
 
 							</div>
 
-							<img class="volunteer-image" src="https://images.pexels.com/photos/66863/goose-water-bird-nature-bird-66863.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="A goose up close and lookin at ya with some other geese hangin out in the background." />
+							<img class="volunteer-image" src="https://cannabisequityil.org/wp-content/uploads/2020/09/resource-3.jpg" alt="A goose up close and lookin at ya with some other geese hangin out in the background." />
 						</figure>
 					</div>
 
