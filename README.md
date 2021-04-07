@@ -63,3 +63,7 @@ WORDPRESS_DB_NAME=text
 #### CSS Edits using Sass
 
 Sass is installed and style updates in the child folder can be made to the `style.scss` file. For running and compiling locally, install [here](https://sass-lang.com/install).
+
+#### How To Contribute
+
+For a guide on how to contribute to the project see [here](from-trello-to-merge.md)
