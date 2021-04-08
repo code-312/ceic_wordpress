@@ -63,3 +63,6 @@ WORDPRESS_DB_NAME=text
 #### CSS Edits using Sass
 
 Sass is installed and style updates in the child folder can be made to the `style.scss` file. For running and compiling locally, install [here](https://sass-lang.com/install).
+
+
+This is some work Ryan has done.
