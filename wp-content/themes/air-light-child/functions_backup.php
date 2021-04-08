@@ -11,16 +11,3 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
-
-function myprefix_enqueue_scripts() {
-  if ( is_page_template( 'instagram-page.php' ) ) { 
-    wp_enqueue_script( 
-      'ig-carousel',
-      get_stylesheet_directory_uri() . '/js/ig-carousel.js', 
-      array('jquery'),
-      '1.0.0',
-      true );
-  }
-}
-
-add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
