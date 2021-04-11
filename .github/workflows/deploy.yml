@@ -30,16 +30,19 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
           script: |
             # Remove repo dir if exists
-            rm -rf ceic_wordpress
-            git clone https://github.com/Code-For-Chicago/ceic_wordpress.git
+            rm -rf /wp_docker/ceic_wordpress
+            # create docker dir
+            mkdir /wp_docker
+            # clone dev branch
+            git clone --branch develop https://github.com/Code-For-Chicago/ceic_wordpress.git
             cd ceic_wordpress
             
             #build container
             #command to build 
-            #docker build -t [CONTAINER]:latest . --no-cache
+            docker build -t ceic:latest . --no-cache
             
             # stop all running containers
-            #docker stop $(docker ps -aq) 
+            docker stop $(docker ps -aq) 
             
             # run container
-            #docker run -d -p [PORT] [CONTAINER
+            docker run -d -p 80:5000 ceic
