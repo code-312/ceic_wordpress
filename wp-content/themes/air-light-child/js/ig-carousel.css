@@ -1,0 +1,68 @@
+/* contain the main slider */
+
+.slide-wrap {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: 300ms;
+}
+
+/* ensure that we can adjust z-index or position elements absolutely within the slideshow itself (e.g., navigation) */
+
+.slideshow {
+  position: relative;
+}
+
+/* set all slides as absolute positioning so they will stack on top of each other, and hidden from one another */
+
+.slide-entry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 300ms;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px 5%;
+  z-index: 20;
+  /* &.active {
+    // this is how we transition the slides in/out
+    opacity: 1;
+    visibility: visible;
+  } */
+}
+
+/* set up our basic left/right navigation, would should ideally be vertically centered */
+
+.slide-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  z-index: 0;
+}
+
+.slide-nav li {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 25px;
+}
+
+/* pull our navigation out of the slider container to avoid z-index issues */
+
+#prev-slide {
+  margin-left: -20px;
+}
+
+#next-slide {
+  margin-right: -20px;
+}

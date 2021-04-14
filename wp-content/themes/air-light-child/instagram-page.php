@@ -21,7 +21,23 @@ get_header(); ?>
                 } else {
                     get_template_part('template-parts/content', 'none');
                 } ?>
-              <div id="instagram-carousel"> Instagram Div </div>
+                
+              <div class="slide-wrap">
+                <div class="slideshow">
+
+                  <!-- <div class="slide-entry">
+                    <div class="slide-content">CONTENT</div>
+                  </div> -->
+
+                  <ul class="slide-nav">
+                    <li id="prev-slide"><i>«</i></li>
+                    <li id="next-slide"><i>»</i></li>
+                  </ul> <!-- end .slide-nav -->
+
+                </div> <!-- end .slideshow -->
+
+              </div> <!-- end .slide-wrap -->
+              
             </div>
         </div>
 
