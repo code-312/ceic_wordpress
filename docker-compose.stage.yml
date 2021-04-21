@@ -16,12 +16,12 @@ services:
    wordpress:
      depends_on:
        - db
-     image: wordpress:cli
+     image: wordpress:latest
      ports:
        - "80:80"
      restart: always
      volumes: 
-      - ./wp-content:/var/www/html/wp-content
+      - wp_data:/var/www/html/wp-content
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
@@ -31,5 +31,16 @@ services:
                define('WP_HOME','http://45.79.210.227');
                define('WP_SITEURL','http://45.79.210.227');
 
+  wpcli:
+      depends_on: 
+        - mysql
+        - wordpress
+      image: wordpress:cli
+      links:
+        - mysql:db
+      volumes:
+        - wp_data:/var/www/html/wp-content
+
 volumes:
-    db_data: {}
+  db_data:
+  wp_data:
