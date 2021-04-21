@@ -20,7 +20,7 @@ jobs:
             if [ ! -d ceic_wordpress ]
             then
                 echo "Repository not present; cloning"
-                git clone --branch develop https://github.com/Code-For-Chicago/ceic_wordpress.git
+                git clone --branch ci-deploy-action https://github.com/Code-For-Chicago/ceic_wordpress.git
             fi
 
             cd ceic_wordpress
