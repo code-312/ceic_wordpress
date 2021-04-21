@@ -26,4 +26,6 @@ jobs:
             cd ceic_wordpress
             docker-compose down
             git pull
+            git submodule init
+            git submodule update
             docker-compose -f docker-compose.stage.yml up -d
