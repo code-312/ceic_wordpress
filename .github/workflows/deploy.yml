@@ -28,4 +28,5 @@ jobs:
             git pull
             git submodule init
             git submodule update
+            #SSH_HOST="${{secrets.SSH_HOST}}"
             docker-compose -f docker-compose.stage.yml up -d
