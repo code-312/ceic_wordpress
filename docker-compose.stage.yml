@@ -28,8 +28,8 @@ services:
        WORDPRESS_DB_PASSWORD: wordpress
        WORDPRESS_DB_NAME: wordpress
        WORDPRESS_CONFIG_EXTRA: |
-               define('WP_HOME','http://${SSH_HOST}');
-               define('WP_SITEURL','http://${SSH_HOST}');
+               define('WP_HOME','http://45.79.210.227');
+               define('WP_SITEURL','http://45.79.210.227');
 
 volumes:
   db_data:
