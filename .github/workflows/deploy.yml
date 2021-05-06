@@ -1,0 +1,31 @@
+name: Deploy to Stage
+
+on:
+  push:
+    branches: [ develop ]
+  workflow_dispatch:
+
+jobs:
+  deploy_via_ssh:
+    environment: staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo, run docker-compose
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_KEY }}
+          command: |
+            if [ ! -d ceic_wordpress ]
+            then
+                echo "Repository not present; cloning"
+                git clone --branch develop https://github.com/Code-For-Chicago/ceic_wordpress.git
+            fi
+
+            cd ceic_wordpress
+            docker-compose down
+            git pull
+            git submodule init
+            git submodule update
+            docker-compose -f docker-compose.stage.yml up -d
