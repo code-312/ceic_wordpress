@@ -35,13 +35,13 @@
           <?php if (is_front_page() && is_home()) : ?>
             <div class="site-title">
               <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/logo.png'; ?>" />
+                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . './logo-transparent.png'; ?>" />
               </a>
             </div>
           <?php else : ?>
             <p class="site-title">
               <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/logo.png'; ?>" />
+                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/logo-transparent.png'; ?>" />
               </a>
             </p>
           <?php endif;
@@ -53,6 +53,7 @@
         </div><!-- .site-branding -->
 
         <div class="main-navigation-wrapper" id="main-navigation-wrapper">
+          <button id="donate-button" type="button">Donate</button>
 
           <button id="nav-toggle" class="nav-toggle hamburger" type="button" aria-label="<?php esc_attr_e('Menu', 'air-light'); ?>">
             <span class="hamburger-box">
