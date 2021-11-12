@@ -3,6 +3,7 @@ version: '3.3'
 services:
    db:
      image: mysql:5.7
+     platform: linux/amd64
      volumes:
        - db_data:/var/lib/mysql
        - ./data:/docker-entrypoint-initdb.d
