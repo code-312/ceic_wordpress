@@ -1,0 +1,46 @@
+.customize-control-is-radio-image label {
+  position: relative;
+  display: inline-block;
+  margin: 5px 5px 0px 0;
+}
+
+.customize-control-is-radio-image input {
+  display: none;
+}
+
+#customize-controls .customize-control-is-radio-image label img {
+  max-width: unset;
+}
+
+.customize-control-is-radio-image input + label img {
+  border: 1px solid #f1f1f1;
+}
+
+.customize-control-is-radio-image label:hover img {
+    border: 1px solid #0BAEF0;
+}
+
+.customize-control-is-radio-image input:checked + label img {
+    border: 2px solid #0BAEF0;
+    background: none;
+}
+
+.customize-control-is-radio-image input + label .image-clickable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.customize-control-is-radio-image .is-no-image {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.customize-control-is-radio-image label.is-no-image {
+    margin: 10px 0;
+    vertical-align: initial;
+}

@@ -12,8 +12,7 @@
 */
 
 /* Colors */
-
-$light-green: #10ac84; // TODO Remove?
+$light-green: #10ac84;
 $dark-green: #030303;
 $orange: #ec7907;
 $dark-grey: #525252;
@@ -21,18 +20,20 @@ $light-grey: #eaeaea;
 $link-green: #368370;
 $hover-link: #909090;
 
+// Icons
 $icon-arrow-down: './sort-down.svg';
+$icon-arrow-up: './sort-up.svg';
 
 /* Body */
 .container {
-  max-width: 100% !important;
+  max-width: 90% !important;
 }
 
 /* Header */
 #page .nav-container .site-header {
   box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
   max-width: 100%;
-  padding: 2rem 5% 0 5%;
+  padding: 2rem 5%;
 }
 
 .nav-primary .menu-items .menu-item
@@ -48,19 +49,22 @@ a, li {
   padding: 16px 0;
 }
 
-// TODO
-// L398 wp-content/themes/air-light/sass/navigation/_nav-desktop.scss
-@media only screen and (min-width: 960px) {
-  .nav-primary .menu-item .menu-item-has-children >a {
-    padding-right: 2rem;
+.nav-primary .menu-items .menu-item.menu-item-has-children {
+   > a {
+    padding-right: 2.5rem;
   }
 }
+
+// @media only screen and (min-width: 960px) {
+
+// }
 
 .nav-primary .menu-items .menu-item
   a:hover, li:hover {
     color: $hover-link;
   }
 
+  // TODO
 .hamburger-box {
   width: 3rem;
 
@@ -89,30 +93,41 @@ a, li {
 
     a {
       color: black;
+      font-size: 18px;
       font-weight: normal;
       line-height: 21px;
-      font-size: 18px;
       padding-left: 0;
     }
   }
   
   &.sub-menu {
+    border-radius: 2px;
     box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
     filter: drop-shadow(0px 4px 20px rgba(210, 215, 223, 0.25));
-    right: 0.1rem;
+    margin-top: 4.3rem;
     padding: 0;
-    border-radius: 2px;
+    right: 0.1rem;
   }
 }
 
 // Dropdown toggle arrow
-// TODO reverse direction when open
 #nav .menu-items .menu-item .dropdown-toggle {
   background-image: url($icon-arrow-down);
   cursor: pointer;
   height: 12px;
   width: 12px;
-  top: 55%
+  top: 55%;
+}
+// TODO reverse direction when open
+
+#nav .menu-items .menu-item.active .dropdown-toggle {
+  &.active {
+    background-image: url($icon-arrow-up);
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    top: 55%;
+  }
 }
 
 // TODO fix this
@@ -128,17 +143,31 @@ a, li {
   }
 }
 
+// TODO
 // Tablet header
 @media (min-width: 768px) and (max-width: 1023px) {
   .logo {
     max-width: 20rem;
     height: auto;
   }
+
+  #nav-toggle .hamburger-box {
+    display: none;
+  }
+
+  // .main-navigation-wrapper #donate-button {
+  //   display: none;
+  // }
 }
 
+// TODO
 // Phone header
 @media (max-width: 767px) {
   .logo {
+    display: none;
+  }
+
+  .main-navigation-wrapper #donate-button {
     display: none;
   }
 }
