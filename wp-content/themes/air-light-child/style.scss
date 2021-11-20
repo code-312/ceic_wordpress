@@ -24,6 +24,11 @@ $hover-link: #909090;
 $icon-arrow-down: './sort-down.svg';
 $icon-arrow-up: './sort-up.svg';
 
+// NOTE: Base font size was 10px. Not sure why, but this updates it to 16px and all rem sizes are updated to match.
+html {
+  font-size: 16px !important;
+}
+
 /* Body */
 .container {
   max-width: 90% !important;
@@ -33,25 +38,25 @@ $icon-arrow-up: './sort-up.svg';
 #page .nav-container .site-header {
   box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
   max-width: 100%;
-  padding: 2rem 5%;
+  padding: 1.25rem 5%;
 }
 
 .nav-primary .menu-items .menu-item
 a, li {
-  padding: 0 0 0 2.8rem;
+  padding: 0 0 0 1.75rem;
   color: $link-green;
-  font-size: 1.8rem;
+  font-size: 1.13rem;
   font-weight: 700;
 }
 
 #nav {
   display: flex;
-  padding: 16px 0;
+  padding: .63rem 0;
 }
 
 .nav-primary .menu-items .menu-item.menu-item-has-children {
    > a {
-    padding-right: 2.5rem;
+    padding-right: 1.56rem;
   }
 }
 
@@ -66,7 +71,7 @@ a, li {
 
   // TODO
 .hamburger-box {
-  width: 3rem;
+  width: 1.87rem;
 
   .hamburger-inner,
   .hamburger-inner::before,
@@ -89,7 +94,7 @@ a, li {
   li {
     height: 70px;
     padding: 22px 16px;
-    width: 25rem;
+    width: 15.62rem;
 
     a {
       color: black;
@@ -104,9 +109,9 @@ a, li {
     border-radius: 2px;
     box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
     filter: drop-shadow(0px 4px 20px rgba(210, 215, 223, 0.25));
-    margin-top: 4.3rem;
+    margin-top: 2.69rem;
     padding: 0;
-    right: 0.1rem;
+    right: 0.06rem;
   }
 }
 
@@ -138,7 +143,7 @@ a, li {
 // Desktop header
 @media (min-width: 1024px) {
   .logo {
-    max-width: 22rem;
+    max-width: 13.75rem;
     height: auto;
   }
 }
@@ -147,7 +152,7 @@ a, li {
 // Tablet header
 @media (min-width: 768px) and (max-width: 1023px) {
   .logo {
-    max-width: 20rem;
+    max-width: 13.75rem;
     height: auto;
   }
 
@@ -187,7 +192,7 @@ a, li {
   justify-content: flex-end;
   line-height: 19px;
   margin-left: auto;
-  margin-right: 0.6rem;
+  margin-right: 0.37rem;
   padding: 8px 23px;
 }
 
@@ -198,153 +203,336 @@ a, li {
 
 /* Footer */
 #site-footer {
-  background-color: $light-green;
-  color: white;
-  font-size: 1.3rem;
-  text-align: left;
-
-  @media (min-width: 550px) {
-    font-size: 1.5rem;
-  }
+  background-color: white;
+  color: #126B55;
+  font-size: 1.13rem;
+  font-size: 18px;
+  margin: 0 5% 2.25rem 5%;
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
-  min-height: 120px;
-  max-width: 2000px;
-  margin: 0 auto;
-
-  @media (min-width: 800px) {
-    flex-direction: row-reverse;
-  }
+  gap: 1rem;
 }
 
-.footer-content-container {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-  max-width: 720px;
-  min-height: 100px;
+.footer-newsletter-container {  
+  align-self: end;
 
-  @media (max-width: 320px) {
-    flex-wrap: wrap;
-  }
-
-  @media (min-width: 900px) {
-    justify-content: space-around;
-  }
-}
-
-.footer-logo-container {
-  display: none;
-
-  @media (min-width: 900px) {
-    display: inline;
-    max-width: 360px;
-    align-self: center;
-  }
-}
-
-.footer-logo {
-  width: 250px;
-  height: auto;
-}
-
-.footer-info-container {
-  padding: 10px 5px 10px 10px;
-  align-self: flex-start;
-
-  @media (min-width: 700px) {
-    align-self: center;
-  }
-}
-
-.social-media-container {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  padding: 10px 10px 10px 5px;
-}
-
-.footer-newsletter-container {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 800px;
-  padding: 10px;
-  border-top: 2px solid $light-green;
-
-  @media (min-width: 800px) {
-    width: 40%;
-  }
-
-  label {
-    color: $dark-green;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-left: 10px;
-  }
-
-  #email {
-    border: 1px solid $dark-green;
-    border-radius: 5px;
-    background-color: white;
-    padding: 5px 10px;
-    width: 60%;
+  @media only screen and (max-width: 767px) {
+    align-self: flex-start;
+    margin-bottom: 2rem;
+    width: 17rem;
   }
 
   .footer-newsletter-input-container {
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
-  }
+    gap: .88rem;
 
-  #newsletter-submit {
-    background-color: $light-green;
-    color: white;
-    font-weight: bold;
-    font-size: 1.6rem;
-    line-height: 1.3;
-    height: 38px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 30%;
-    box-shadow: 1px 2px 4px #777;
+    @media only screen and  (max-width: 1024px) {
+      display: inline;
+    }
 
-    @media (max-width: 320px) {
-      font-size: 1.4rem;
+    label {
+      color: black;
+
+      p {
+        margin: 0;
+        text-align: end;
+
+        @media only screen and  (max-width: 1024px) {
+          margin-bottom: .75rem;
+        }
+
+        @media only screen and  (max-width: 767px) {
+          text-align: start;
+        }
+
+        &:first-child {
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: .25rem;
+        }
+      }
+    }
+  
+    #email {
+      background-color: white;
+      border: 1px solid #909090;
+      border-radius: .25rem;
+      box-sizing: border-box;
+      color: #000000;
+      height: 2.19rem;
+      margin: auto;
+      padding: 5px 10px;
+      width: 15.62rem;
+
+
+      &::placeholder {
+        color: #909090;
+      }
+
+      @media only screen and (max-width: 767px) {
+        border-radius: 5px 0px 0px 5px;
+        font-size: 1rem;
+        height: 1.95rem;
+        // Is there a better way to do this?
+        margin-right: -4px;
+        width: 15rem;
+      }
+    }
+
+    .newsletter-submit-container {
+      display: inline-block;
+      margin: auto;
+
+      @media only screen and (max-width: 767px) {
+
+        &:after {
+          content: ">";
+          font-size: 1.25rem;
+          position: absolute;
+          display: block;
+          color: white;
+          pointer-events: none;
+          transform: translate(120%, -120%);
+        }
+
+        // 9-30-21 note: focus not working for this style
+        &:focus:after, &:hover:after {
+          color: #126B55;
+        }
+      }
+
+      #newsletter-submit {
+        background-color: #126B55;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        height: 2.19rem;
+        line-height: 1.2rem;
+        outline: none;
+        width: 6.56rem;
+
+        &:hover, &:focus {
+          background-color: white;
+          border: .1rem solid #126B55;
+          color: #126B55;
+          cursor: pointer;
+        }
+
+        &:active {
+          background-color: #D2D7DF;
+        }
+  
+        @media only screen and (max-width: 767px) {
+          border-radius: 0px 5px 5px 0px;
+          box-shadow: none;
+          color: transparent;
+          height: 1.94rem;
+          margin: 0;
+          width: 1.94rem;
+
+          &:hover, &:focus {
+            color: transparent;
+          }
+        }
+      }
     }
   }
 }
 
-.footer-newsletter-inner-container {
-  max-width: 720px;
-}
+.footer-content-container {
+  border-bottom: 1px solid #10A882;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  max-width: 100%;
+  min-height: 100px;
+  padding-bottom: 1rem;
 
-.social-media-container__icons {
-  margin-top: 10px;
-}
-
-.social-media-icon {
-  width: 30px;
-  height: 30px;
-
-  @media (min-width: 350px) {
-    width: 40px;
-    height: 40px;
+  @media only screen and (max-width: 767px) {
+    align-self: center;
+    display: inline;
+    width: 90vw;
   }
 }
 
-.social-media-link + .social-media-link {
-  margin-left: 10px;
+.footer-logo-container {
+  display: inline;
+  align-self: flex-end;
+  margin-bottom: 0.3rem;
+
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 3.5rem;
+    position: absolute;
+  }
+
+  @media only screen and (max-width: 767px) {
+    max-width: 17.45rem;
+    position: relative;
+  }
 }
 
-.site-branding {
-  width: 33%;
+.footer-logo {
+  width: 13.81rem;
+  height: auto;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &:active {
+    fill: #126B55;
+  }
+}
+
+.footer-logo-mobile-container {
+  display: none;
+  height: 5.69rem;
+  position: relative;
+  width: 16.5rem;
+
+  @media only screen and (max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer-logo-mobile {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+    &:active {
+      fill: #126B55;
+    }
+  }
+}
+
+
+// Footer nav
+.footer-nav-container {
+  align-self: end;
+  
+  .menu-footer-menu-container {
+    background-color: white;
+    margin: -1rem auto;
+
+    #menu-footer-menu {
+      background-color: white;
+      display: flex;
+      gap: 1.5rem;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      @media only screen and (max-width: 767px) {
+        display: inline;
+        text-align: center;
+
+        li {
+          margin: 1rem;
+        }
+      }
+  
+      .menu-item {
+        a {
+          color: #126B55;
+          font-size: .88rem;
+          text-decoration: underline;
+
+          @media only screen and (max-width: 767px) {
+            display: inline;
+            text-align: center;
+          }
+
+          &:active {
+            color: #909090;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.social-media-container {
+  align-self: flex-end;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  p {
+    margin: 0 0 .75rem 0;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  .social-media-header {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0 0 .25rem 0;
+    text-align: end;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .social-media-container__icons {
+    text-align: right;
+
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    .social-media-link {
+      &:not(:last-child) {
+        margin-right: 1.75rem;
+
+        @media only screen and (max-width: 767px) {
+          margin-right: 1.49rem;
+        }
+      }
+
+      .social-media-icon {
+        width: 1.92rem;
+        height: 1.92rem;
+
+        &:hover {
+          fill: #10A882;
+        }
+
+        &:active {
+          fill: #909090;
+        }
+      }
+    }
+  }
+}
+
+.footer-info-container {
+  color: black;
+  font-size: 1.13rem;   
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1rem;   
+    margin: 0 auto;
+    text-align: center;
+    width: 17.45rem;
+  }
 }
 
 /* KYR Hero Section */
