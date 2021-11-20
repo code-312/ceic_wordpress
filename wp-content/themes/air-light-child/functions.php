@@ -11,3 +11,8 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
+
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'air-light' ),
+    'secondary' => __( 'Secondary Menu', 'air-light' )
+) );
