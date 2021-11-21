@@ -12,13 +12,14 @@
 */
 
 /* Colors */
-$light-green: #10ac84;
-$dark-green: #030303;
+$logo-green: #10ac84;
+$light-green: #10A882;
+$dark-green: #126B55;
 $orange: #ec7907;
 $dark-grey: #525252;
 $light-grey: #eaeaea;
 $link-green: #368370;
-$hover-link: #909090;
+$active-link: #909090;
 
 // Icons
 $icon-arrow-down: './sort-down.svg';
@@ -57,6 +58,16 @@ a, li {
 .nav-primary .menu-items .menu-item.menu-item-has-children {
    > a {
     padding-right: 1.56rem;
+
+    // Make hoverable area go down to submenu
+    &:after {
+      content: "";
+      display: block;
+      height: 4rem;
+      position: absolute;
+      // top: 4rem;
+      width: 100%;
+    }
   }
 }
 
@@ -66,7 +77,7 @@ a, li {
 
 .nav-primary .menu-items .menu-item
   a:hover, li:hover {
-    color: $hover-link;
+    color: $active-link;
   }
 
   // TODO
@@ -84,13 +95,14 @@ a, li {
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    background-color: $hover-link;
+    background-color: $active-link;
   }
 }
 
 // Dropdown items
 // TODO clickable on hover
 .nav-primary .menu-items .menu-item ul {
+
   li {
     height: 70px;
     padding: 22px 16px;
@@ -109,9 +121,10 @@ a, li {
     border-radius: 2px;
     box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
     filter: drop-shadow(0px 4px 20px rgba(210, 215, 223, 0.25));
-    margin-top: 2.69rem;
+    margin-top: 2.5rem;
     padding: 0;
     right: 0.06rem;
+    z-index: -1;
   }
 }
 
@@ -137,7 +150,7 @@ a, li {
 
 // TODO fix this
 #nav .menu-items .menu-item .dropdown-toggle:hover {
-  fill: $hover-link
+  fill: $active-link;
 }
 
 // Desktop header
@@ -177,34 +190,126 @@ a, li {
   }
 }
 
-// Donate button
-// TODO reposition, link, hover state
-#donate-button {
-  background-color: #126B55;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  color: white;
-  cursor: pointer;
+.navigation-buttons-wrapper {
   display: flex;
-  font-size: 16px;
-  font-weight: 800;
-  justify-content: flex-end;
-  line-height: 19px;
-  margin-left: auto;
-  margin-right: 0.37rem;
-  padding: 8px 23px;
-}
+  margin-bottom: 1.37rem;
 
-// TODO confirm
-#donate-button:hover {
-  background-color: $hover-link;
+  // Ivory Search bar customization
+  .is-search-form {
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+
+    // default width before expand
+    transition: 0.2s ease-in-out;
+    width: 3rem;
+  }
+
+  .open {
+    border: 2px solid $dark-green;
+    // What should this be?
+    width: 16.5rem;
+  }
+
+  #is-search-input-86.is-search-input {
+    border: none !important;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1rem !important;
+
+    &::placeholder {
+      color: #777777;
+      font-size: 1rem;
+    }
+    
+
+    &:focus {
+      background: none;
+    }
+  }
+
+  // default display none for button functionality
+  .closed {
+    display: none;
+  }
+
+  .is-search-submit {
+    align-self: flex-end;
+
+    .is-search-icon {
+      background-color: white;
+      border: none !important;
+      box-sizing: border-box;
+      border-radius: 5px;
+    
+      svg {
+        bottom: .5rem;
+        position: relative;
+        right: .5rem;
+        width: 2.5rem;
+      }
+    
+      &:hover {
+        background-color: white;
+        cursor: pointer;
+    
+        svg path {
+          fill: $light-green !important;
+        }
+      }
+    
+      &:active {
+        background-color: white;
+    
+        svg path {
+          fill: $active-link !important;
+        }
+      }
+    
+      svg path {
+        fill: $dark-green !important;
+      }
+    }
+  }
+
+  // Donate button
+  // TODO reposition, link, hover state
+  #donate-button {
+    background-color: $dark-green;
+    border: .1rem solid $dark-green;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: flex-end;
+    line-height: 19px;
+    margin-left: 1.25rem;
+    margin-right: 0.37rem;
+    padding: 8px 23px;
+
+    &:hover, &:focus {
+      background-color: white;
+      border: .1rem solid $dark-green;
+      color: $dark-green;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #D2D7DF;
+    }
+  }
 }
 
 /* Footer */
 #site-footer {
   background-color: white;
-  color: #126B55;
+  color: $dark-green;
   font-size: 1.13rem;
   font-size: 18px;
   margin: 0 5% 2.25rem 5%;
@@ -300,12 +405,12 @@ a, li {
 
         // 9-30-21 note: focus not working for this style
         &:focus:after, &:hover:after {
-          color: #126B55;
+          color: $dark-green;
         }
       }
 
       #newsletter-submit {
-        background-color: #126B55;
+        background-color: $dark-green;
         border: none;
         border-radius: 5px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -319,8 +424,8 @@ a, li {
 
         &:hover, &:focus {
           background-color: white;
-          border: .1rem solid #126B55;
-          color: #126B55;
+          border: .1rem solid $dark-green;
+          color: $dark-green;
           cursor: pointer;
         }
 
@@ -346,7 +451,7 @@ a, li {
 }
 
 .footer-content-container {
-  border-bottom: 1px solid #10A882;
+  border-bottom: 1px solid $light-green;
   display: flex;
   gap: 2rem;
   justify-content: flex-start;
@@ -386,7 +491,7 @@ a, li {
   }
 
   &:active {
-    fill: #126B55;
+    fill: $dark-green;
   }
 }
 
@@ -407,7 +512,7 @@ a, li {
     width: 100%;
 
     &:active {
-      fill: #126B55;
+      fill: $dark-green;
     }
   }
 }
@@ -440,7 +545,7 @@ a, li {
   
       .menu-item {
         a {
-          color: #126B55;
+          color: $dark-green;
           font-size: .88rem;
           text-decoration: underline;
 
@@ -512,11 +617,11 @@ a, li {
         height: 1.92rem;
 
         &:hover {
-          fill: #10A882;
+          fill: $light-green;
         }
 
         &:active {
-          fill: #909090;
+          fill: $active-link;
         }
       }
     }
@@ -551,7 +656,7 @@ a, li {
 // 8-20 Generic Page Template
 
 h2 {
-  color: $light-green !important;
+  color: $logo-green !important;
   font-size: 18px;
   margin-top: auto;
 }
@@ -693,7 +798,7 @@ figcaption {
       margin-bottom: 5em;
 
       h1 {
-        color: $light-green;
+        color: $logo-green;
         font-size: 24px;
         margin-bottom: 1em;
       }
@@ -744,7 +849,7 @@ figcaption {
   }
 
   .section-heading {
-    color: $light-green;
+    color: $logo-green;
     font-size: 24px;
     margin-bottom: 1em;
     text-align: center;
@@ -754,7 +859,7 @@ figcaption {
     margin-bottom: 5em;
     .column-one-heading,
     .column-two-heading {
-      color: $light-green;
+      color: $logo-green;
       font-size: 24px;
       margin-bottom: 1em;
     }

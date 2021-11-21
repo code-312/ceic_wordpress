@@ -47,6 +47,14 @@ a, li {
   padding-right: 1.56rem;
 }
 
+.nav-primary .menu-items .menu-item.menu-item-has-children > a:after {
+  content: "";
+  display: block;
+  height: 4rem;
+  position: absolute;
+  width: 100%;
+}
+
 .nav-primary .menu-items .menu-item
 a:hover, li:hover {
   color: #909090;
@@ -88,9 +96,10 @@ a:hover, li:hover {
           box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
   -webkit-filter: drop-shadow(0px 4px 20px rgba(210, 215, 223, 0.25));
           filter: drop-shadow(0px 4px 20px rgba(210, 215, 223, 0.25));
-  margin-top: 2.69rem;
+  margin-top: 2.5rem;
   padding: 0;
   right: 0.06rem;
+  z-index: -1;
 }
 
 #nav .menu-items .menu-item .dropdown-toggle {
@@ -139,9 +148,113 @@ a:hover, li:hover {
   }
 }
 
-#donate-button {
+.navigation-buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.37rem;
+}
+
+.navigation-buttons-wrapper .is-search-form {
+  border: 2px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  width: 3rem;
+}
+
+.navigation-buttons-wrapper .open {
+  border: 2px solid #126B55;
+  width: 16.5rem;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1rem !important;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input:-ms-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input::-ms-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input::placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.navigation-buttons-wrapper #is-search-input-86.is-search-input:focus {
+  background: none;
+}
+
+.navigation-buttons-wrapper .closed {
+  display: none;
+}
+
+.navigation-buttons-wrapper .is-search-submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon {
+  background-color: white;
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon svg {
+  bottom: .5rem;
+  position: relative;
+  right: .5rem;
+  width: 2.5rem;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon:hover svg path {
+  fill: #10A882 !important;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon:active {
+  background-color: white;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon:active svg path {
+  fill: #909090 !important;
+}
+
+.navigation-buttons-wrapper .is-search-submit .is-search-icon svg path {
+  fill: #126B55 !important;
+}
+
+.navigation-buttons-wrapper #donate-button {
   background-color: #126B55;
-  border: 0;
+  border: 0.1rem solid #126B55;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -156,13 +269,20 @@ a:hover, li:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
   line-height: 19px;
-  margin-left: auto;
+  margin-left: 1.25rem;
   margin-right: 0.37rem;
   padding: 8px 23px;
 }
 
-#donate-button:hover {
-  background-color: #909090;
+.navigation-buttons-wrapper #donate-button:hover, .navigation-buttons-wrapper #donate-button:focus {
+  background-color: white;
+  border: 0.1rem solid #126B55;
+  color: #126B55;
+  cursor: pointer;
+}
+
+.navigation-buttons-wrapper #donate-button:active {
+  background-color: #D2D7DF;
 }
 
 /* Footer */
@@ -317,7 +437,7 @@ a:hover, li:hover {
 
 .footer-newsletter-container .footer-newsletter-input-container .newsletter-submit-container #newsletter-submit:hover, .footer-newsletter-container .footer-newsletter-input-container .newsletter-submit-container #newsletter-submit:focus {
   background-color: white;
-  border: .1rem solid #126B55;
+  border: 0.1rem solid #126B55;
   color: #126B55;
   cursor: pointer;
 }
@@ -573,7 +693,7 @@ a:hover, li:hover {
 }
 
 .container h1 {
-  color: #030303;
+  color: #126B55;
   margin: 0;
 }
 
