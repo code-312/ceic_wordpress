@@ -20,7 +20,6 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-
   <?php wp_head(); ?>
 </head>
 
@@ -44,22 +43,20 @@
           if ($description || is_customize_preview()) : ?>
             <p class="site-description screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
           <?php endif; ?>
+
         </div><!-- .site-branding -->
 
         <div class="main-navigation-wrapper" id="main-navigation-wrapper">
-
           <div class="navigation-buttons-wrapper">
-            <?php echo do_shortcode( '[ivory-search id="6" title="Default Search Form"]' ); ?>
+            <?php echo do_shortcode( '[ivory-search id="86" title="Default Search Form"]' ); ?>
 
             <button id="donate-button" type="button">Donate</button>
           </div>
-
-
           <button id="nav-toggle" class="nav-toggle hamburger" type="button" aria-label="<?php esc_attr_e('Menu', 'air-light'); ?>">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
-            <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e('Menu', 'air-light'); ?>"><?php esc_attr_e('Menu', 'air-light'); ?></span>
+            <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e('Menu', 'air-light'); ?>"><?php esc_attr_e('Menu', 'air-light'); ?></span>R
           </button>
 
           <nav id="nav" class="nav-primary" role="navigation">

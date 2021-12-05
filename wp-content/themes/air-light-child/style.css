@@ -94,7 +94,7 @@ li:hover {
 }
 
 #nav .menu-items .menu-item .dropdown-toggle {
-  background-image: url("./sort-down.svg");
+  background-image: url("./assets/sort-down.svg");
   cursor: pointer;
   height: 12px;
   width: 12px;
@@ -102,7 +102,7 @@ li:hover {
 }
 
 #nav .menu-items .menu-item.active .dropdown-toggle.active {
-  background-image: url("./sort-up.svg");
+  background-image: url("./assets/sort-up.svg");
   cursor: pointer;
   height: 12px;
   width: 12px;

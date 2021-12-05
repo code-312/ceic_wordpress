@@ -22,8 +22,8 @@ $link-green: #368370;
 $active-link: #909090;
 
 // Icons
-$icon-arrow-down: './sort-down.svg';
-$icon-arrow-up: './sort-up.svg';
+$icon-arrow-down: './assets/sort-down.svg';
+$icon-arrow-up: './assets/sort-up.svg';
 
 // NOTE: Base font size was 10px. Not sure why, but this updates it to 16px and all rem sizes are updated to match.
 html {
@@ -174,6 +174,7 @@ a, li {
   .mobile-logo {
     display: none;
   }
+
   #nav-toggle .hamburger-box {
     display: none;
   }
