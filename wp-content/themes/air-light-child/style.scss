@@ -224,7 +224,7 @@ a, li {
     width: 16.5rem;
   }
 
-  #is-search-input-86.is-search-input {
+  .is-search-input[id^="is-search-input"] {
     border: none !important;
     box-sizing: border-box;
     border-radius: 5px;
@@ -234,7 +234,6 @@ a, li {
       color: #777777;
       font-size: 1rem;
     }
-
 
     &:focus {
       background: none;

@@ -26,6 +26,14 @@ function wpb_hook_javascript_footer() {
             let srText = document.querySelector(".is-screen-reader-text");
             let textInput = document.querySelector(".is-search-input");
 
+            // Posting shortcode directly into header does not account for a new id being created each time the form plugin is created (production and dev users will have different ids). This should let us us put the plugin in the header and then use JS to move it where we need it to be in the DOM
+
+            let navButtonsWrapper = document.querySelector(".navigation-buttons-wrapper");
+            
+            navButtonsWrapper.prepend(searchForm);
+
+            // Begin open and close functionality
+
             srText.classList.add("closed");
             textInput.classList.add("closed");
 
