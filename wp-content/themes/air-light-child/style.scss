@@ -22,8 +22,8 @@ $link-green: #368370;
 $active-link: #909090;
 
 // Icons
-$icon-arrow-down: './sort-down.svg';
-$icon-arrow-up: './sort-up.svg';
+$icon-arrow-down: './assets/sort-down.svg';
+$icon-arrow-up: './assets/sort-up.svg';
 
 // NOTE: Base font size was 10px. Not sure why, but this updates it to 16px and all rem sizes are updated to match.
 html {
@@ -116,7 +116,7 @@ a, li {
       padding-left: 0;
     }
   }
-  
+
   &.sub-menu {
     border-radius: 2px;
     box-shadow: 0px 4px 20px rgba(210, 215, 223, 0.25);
@@ -159,6 +159,9 @@ a, li {
     max-width: 13.75rem;
     height: auto;
   }
+  .mobile-logo {
+    display: none;
+  }
 }
 
 // TODO
@@ -167,6 +170,9 @@ a, li {
   .logo {
     max-width: 13.75rem;
     height: auto;
+  }
+  .mobile-logo {
+    display: none;
   }
 
   #nav-toggle .hamburger-box {
@@ -183,6 +189,10 @@ a, li {
 @media (max-width: 767px) {
   .logo {
     display: none;
+  }
+
+  .mobile-logo {
+
   }
 
   .main-navigation-wrapper #donate-button {
@@ -224,7 +234,7 @@ a, li {
       color: #777777;
       font-size: 1rem;
     }
-    
+
 
     &:focus {
       background: none;
@@ -244,31 +254,31 @@ a, li {
       border: none !important;
       box-sizing: border-box;
       border-radius: 5px;
-    
+
       svg {
         bottom: .5rem;
         position: relative;
         right: .5rem;
         width: 2.5rem;
       }
-    
+
       &:hover {
         background-color: white;
         cursor: pointer;
-    
+
         svg path {
           fill: $light-green !important;
         }
       }
-    
+
       &:active {
         background-color: white;
-    
+
         svg path {
           fill: $active-link !important;
         }
       }
-    
+
       svg path {
         fill: $dark-green !important;
       }
@@ -321,7 +331,7 @@ a, li {
   gap: 1rem;
 }
 
-.footer-newsletter-container {  
+.footer-newsletter-container {
   align-self: end;
 
   @media only screen and (max-width: 767px) {
@@ -360,7 +370,7 @@ a, li {
         }
       }
     }
-  
+
     #email {
       background-color: white;
       border: 1px solid #909090;
@@ -432,7 +442,7 @@ a, li {
         &:active {
           background-color: #D2D7DF;
         }
-  
+
         @media only screen and (max-width: 767px) {
           border-radius: 0px 5px 5px 0px;
           box-shadow: none;
@@ -521,7 +531,7 @@ a, li {
 // Footer nav
 .footer-nav-container {
   align-self: end;
-  
+
   .menu-footer-menu-container {
     background-color: white;
     margin: -1rem auto;
@@ -542,7 +552,7 @@ a, li {
           margin: 1rem;
         }
       }
-  
+
       .menu-item {
         a {
           color: $dark-green;
@@ -630,10 +640,10 @@ a, li {
 
 .footer-info-container {
   color: black;
-  font-size: 1.13rem;   
+  font-size: 1.13rem;
 
   @media only screen and (max-width: 767px) {
-    font-size: 1rem;   
+    font-size: 1rem;
     margin: 0 auto;
     text-align: center;
     width: 17.45rem;
