@@ -30,23 +30,17 @@
 
     <div class="nav-container">
       <header class="site-header" role="banner">
-
         <div class="site-branding">
-          <?php if (is_front_page() && is_home()) : ?>
-            <div class="site-title">
-              <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/logo-transparent.png'; ?>" />
-              </a>
-            </div>
-          <?php else : ?>
-            <p class="site-title">
-              <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/logo-transparent.png'; ?>" />
-              </a>
-            </p>
-          <?php endif;
+          <div class="site-title">
+            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+              <img alt="Cannabis Equity Illinois logo" class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/logo-transparent.png'; ?>" />
+            </a>
+            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+              <img alt="Cannabis Equity Illinois logo" class="mobile-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/CEIC_Logo_Mobile_Green.png'; ?>" />
+            </a>
+          </div>
 
-          $description = get_bloginfo('description', 'display');
+          <?php $description = get_bloginfo('description', 'display');
           if ($description || is_customize_preview()) : ?>
             <p class="site-description screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
           <?php endif; ?>
@@ -55,7 +49,7 @@
         <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
           <div class="navigation-buttons-wrapper">
-            <?php echo do_shortcode( '[ivory-search id="86" title="Default Search Form"]' ); ?>
+            <?php echo do_shortcode( '[ivory-search id="6" title="Default Search Form"]' ); ?>
 
             <button id="donate-button" type="button">Donate</button>
           </div>
