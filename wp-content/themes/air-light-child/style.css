@@ -154,6 +154,85 @@ a:hover, li:hover {
   }
 }
 
+.is-search-form {
+  border: 2px solid #126B55;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.is-form-style input.is-search-input {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1rem !important;
+}
+
+.is-form-style input.is-search-input::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.is-form-style input.is-search-input:-ms-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.is-form-style input.is-search-input::-ms-input-placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.is-form-style input.is-search-input::placeholder {
+  color: #777777;
+  font-size: 1rem;
+}
+
+.is-form-style input.is-search-input:focus {
+  background: none;
+}
+
+.is-search-submit {
+  background: none !important;
+}
+
+.is-search-submit .is-search-icon {
+  background-color: white;
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.is-search-submit .is-search-icon svg {
+  bottom: .5rem;
+  position: relative;
+  right: .5rem;
+  width: 2.5rem;
+}
+
+.is-search-submit .is-search-icon:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.is-search-submit .is-search-icon:hover svg path {
+  fill: #10A882 !important;
+}
+
+.is-search-submit .is-search-icon:active {
+  background-color: white;
+}
+
+.is-search-submit .is-search-icon:active svg path {
+  fill: #909090 !important;
+}
+
+.is-search-submit .is-search-icon svg path {
+  fill: #126B55 !important;
+}
+
 .navigation-buttons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,9 +242,6 @@ a:hover, li:hover {
 
 .navigation-buttons-wrapper .is-search-form {
   border: 2px solid white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,38 +257,6 @@ a:hover, li:hover {
   width: 16.5rem;
 }
 
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"] {
-  border: none !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 1rem !important;
-}
-
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"]::-webkit-input-placeholder {
-  color: #777777;
-  font-size: 1rem;
-}
-
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"]:-ms-input-placeholder {
-  color: #777777;
-  font-size: 1rem;
-}
-
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"]::-ms-input-placeholder {
-  color: #777777;
-  font-size: 1rem;
-}
-
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"]::placeholder {
-  color: #777777;
-  font-size: 1rem;
-}
-
-.navigation-buttons-wrapper .is-search-input[id^="is-search-input"]:focus {
-  background: none;
-}
-
 .navigation-buttons-wrapper .closed {
   display: none;
 }
@@ -220,42 +264,6 @@ a:hover, li:hover {
 .navigation-buttons-wrapper .is-search-submit {
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon {
-  background-color: white;
-  border: none !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon svg {
-  bottom: .5rem;
-  position: relative;
-  right: .5rem;
-  width: 2.5rem;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon:hover {
-  background-color: white;
-  cursor: pointer;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon:hover svg path {
-  fill: #10A882 !important;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon:active {
-  background-color: white;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon:active svg path {
-  fill: #909090 !important;
-}
-
-.navigation-buttons-wrapper .is-search-submit .is-search-icon svg path {
-  fill: #126B55 !important;
 }
 
 .navigation-buttons-wrapper #donate-button {

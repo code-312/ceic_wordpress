@@ -200,15 +200,77 @@ a, li {
   }
 }
 
+// Ivory Search bars - Both in header and in Search results page
+
+// TODO: Mobile style
+.is-search-form {
+  border: 2px solid $dark-green;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.is-form-style input.is-search-input {
+  border: none !important;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1rem !important;
+
+  &::placeholder {
+    color: #777777;
+    font-size: 1rem;
+  }
+
+  &:focus {
+    background: none;
+  }
+}
+
+.is-search-submit {
+  background: none !important;
+
+  .is-search-icon {
+    background-color: white;
+    border: none !important;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    svg {
+      bottom: .5rem;
+      position: relative;
+      right: .5rem;
+      width: 2.5rem;
+    }
+
+    &:hover {
+      background-color: white;
+      cursor: pointer;
+
+      svg path {
+        fill: $light-green !important;
+      }
+    }
+
+    &:active {
+      background-color: white;
+
+      svg path {
+        fill: $active-link !important;
+      }
+    }
+
+    svg path {
+      fill: $dark-green !important;
+    }
+  }
+}
+
 .navigation-buttons-wrapper {
   display: flex;
   margin-bottom: 1.37rem;
 
-  // Ivory Search bar customization
+  // Main Ivory search bar:
   .is-search-form {
     border: 2px solid white;
-    box-sizing: border-box;
-    border-radius: 5px;
     display: flex;
     margin-left: auto;
     margin-right: 0;
@@ -224,22 +286,6 @@ a, li {
     width: 16.5rem;
   }
 
-  .is-search-input[id^="is-search-input"] {
-    border: none !important;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-size: 1rem !important;
-
-    &::placeholder {
-      color: #777777;
-      font-size: 1rem;
-    }
-
-    &:focus {
-      background: none;
-    }
-  }
-
   // default display none for button functionality
   .closed {
     display: none;
@@ -247,41 +293,6 @@ a, li {
 
   .is-search-submit {
     align-self: flex-end;
-
-    .is-search-icon {
-      background-color: white;
-      border: none !important;
-      box-sizing: border-box;
-      border-radius: 5px;
-
-      svg {
-        bottom: .5rem;
-        position: relative;
-        right: .5rem;
-        width: 2.5rem;
-      }
-
-      &:hover {
-        background-color: white;
-        cursor: pointer;
-
-        svg path {
-          fill: $light-green !important;
-        }
-      }
-
-      &:active {
-        background-color: white;
-
-        svg path {
-          fill: $active-link !important;
-        }
-      }
-
-      svg path {
-        fill: $dark-green !important;
-      }
-    }
   }
 
   // Donate button
