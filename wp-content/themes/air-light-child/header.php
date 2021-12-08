@@ -48,8 +48,6 @@
 
         <div class="main-navigation-wrapper" id="main-navigation-wrapper">
           <div class="navigation-buttons-wrapper">
-            <?php echo do_shortcode( '[ivory-search id="86" title="Default Search Form"]' ); ?>
-
             <button id="donate-button" type="button">Donate</button>
           </div>
           <button id="nav-toggle" class="nav-toggle hamburger" type="button" aria-label="<?php esc_attr_e('Menu', 'air-light'); ?>">
