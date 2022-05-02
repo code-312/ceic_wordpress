@@ -1,4 +1,4 @@
-Work has moved over to a new [repo] (https://github.com/Code-For-Chicago/ceic-jekyll)
+Work has moved over to a new [repo](https://github.com/Code-For-Chicago/ceic-jekyll)
 
 # ceic_wordpress
 
