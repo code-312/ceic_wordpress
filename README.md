@@ -1,3 +1,5 @@
+Work has moved over to a new [repo] (https://github.com/Code-For-Chicago/ceic-jekyll)
+
 # ceic_wordpress
 
 Repository for work related to the Cannabis Equity Illinois Coalition Website
